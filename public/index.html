@@ -713,76 +713,80 @@
   </div>
 
   <script>
-    // Adjust these numbers to match how many photos you actually have in public/images/
-    // Solo photos of Amanda: public/images/amanda-1.jpg, amanda-2.jpg, ...
-    // Couple photos:        public/images/couple-1.jpg, couple-2.jpg, ...
-    const AMANDA_PHOTO_COUNT = 2;
-    const COUPLE_PHOTO_COUNT = 3;
     const ROTATION_START_MS = Date.UTC(2026, 10, 22);
     const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+    let imageManifest = { amanda: [], couples: [], all: [] };
 
     function getWeeklyIndex(count) {
-      const safeCount = Math.max(1, count);
+      if (!count || count <= 1) return 0;
       const weeks = Math.max(0, Math.floor((Date.now() - ROTATION_START_MS) / MS_PER_WEEK));
-      return (weeks % safeCount) + 1;
+      return weeks % count;
     }
 
-    let amandaFallbackAttempts = 0;
     function handleAmandaPhotoError(imgEl) {
-      amandaFallbackAttempts += 1;
-      if (amandaFallbackAttempts <= AMANDA_PHOTO_COUNT) {
-        const nextIdx = ((getWeeklyIndex(AMANDA_PHOTO_COUNT) + amandaFallbackAttempts - 1) % AMANDA_PHOTO_COUNT) + 1;
-        imgEl.src = "/images/amanda-" + nextIdx + ".jpg";
-      } else {
-        imgEl.classList.add("hidden");
-        document.getElementById("amanda-weekly-fallback").classList.remove("hidden");
-      }
+      imgEl.classList.add("hidden");
+      document.getElementById("amanda-weekly-fallback").classList.remove("hidden");
     }
 
     function renderNewlywedsSection() {
       const grid = document.getElementById("newlyweds-grid");
-      const startIdx = getWeeklyIndex(COUPLE_PHOTO_COUNT);
-      const stories = [
-        {
-          blessing: "Wishing you endless warmth, steady patience, and a marriage that grows sweeter with every season.",
-          label: "Newlyweds Spotlight"
-        },
-        {
-          blessing: "May your home always be filled with laughter, grace, and the joy you shared on your ceremony day.",
-          label: "Joined in Love"
-        },
-        {
-          blessing: "So happy to celebrate your covenant—may every year ahead bring deeper love and peace.",
-          label: "Happily Ever After"
-        }
+      const list = imageManifest.couples || [];
+      if (!list.length) {
+        document.getElementById("newlyweds")?.classList.add("hidden");
+        return;
+      }
+      const blessings = [
+        "Wishing you endless warmth, steady patience, and a marriage that grows sweeter with every season.",
+        "May your home always be filled with laughter, grace, and the joy you shared on your ceremony day.",
+        "So happy to celebrate your covenant—may every year ahead bring deeper love and peace.",
+        "Celebrating two hearts joined in love—wishing you a lifetime of devotion and happiness."
       ];
+      const startIdx = getWeeklyIndex(list.length);
+      const ordered = list.map((_, i) => list[(startIdx + i) % list.length]);
 
-      grid.innerHTML = stories.map((item, idx) => {
-        const photoNum = ((startIdx + idx - 1) % Math.max(1, COUPLE_PHOTO_COUNT)) + 1;
-        const src = "/images/couple-" + photoNum + ".jpg";
+      grid.innerHTML = ordered.map((src, idx) => {
+        const blessing = blessings[idx % blessings.length];
         return `
           <article class="bg-brand-cream rounded-2xl overflow-hidden border border-brand-warm shadow-soft flex flex-col">
-            <div class="aspect-[4/3] w-full bg-brand-peach flex items-center justify-center overflow-hidden relative">
-              <img
-                src="${src}"
-                alt="${item.label}"
-                class="w-full h-full object-cover block"
-                onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
-              />
-              <div class="hidden p-5 text-center text-xs text-brand-rust">
-                <p class="font-bold mb-1">${item.label}</p>
-                <p>Add <code class="bg-white px-1 py-0.5 rounded">public/images/couple-${photoNum}.jpg</code> from your <code class="bg-white px-1 py-0.5 rounded">AQ</code> folder.</p>
-              </div>
+            <div class="aspect-[4/3] w-full bg-brand-peach overflow-hidden">
+              <img src="${src}" alt="Newlyweds married by AQ Wedding Officiant" class="w-full h-full object-cover block" />
             </div>
             <div class="p-5 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-terracotta">${item.label}</span>
-                <p class="font-serif italic text-lg text-brand-charcoal mt-1.5 leading-snug">&ldquo;${item.blessing}&rdquo;</p>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-terracotta">Joined in Love</span>
+                <p class="font-serif italic text-lg text-brand-charcoal mt-1.5 leading-snug">&ldquo;${blessing}&rdquo;</p>
               </div>
             </div>
           </article>
         `;
       }).join("");
+    }
+
+    async function loadAqManifest() {
+      try {
+        const res = await fetch("/images/manifest.json", { cache: "no-store" });
+        if (res.ok) imageManifest = await res.json();
+      } catch (e) {}
+
+      const amandaList = imageManifest.amanda || [];
+      const imgEl = document.getElementById("amanda-weekly-img");
+      if (amandaList.length) {
+        const idx = getWeeklyIndex(amandaList.length);
+        imgEl.src = amandaList[idx];
+        document.getElementById("amanda-week-badge").textContent =
+          amandaList.length > 1
+            ? `Dover, Ohio • Tuscarawas County (Photo ${idx + 1} of ${amandaList.length})`
+            : "Dover, Ohio • Tuscarawas County";
+      } else {
+        handleAmandaPhotoError(imgEl);
+      }
+
+      const ac = document.getElementById("portal-amanda-count");
+      const cc = document.getElementById("portal-couple-count");
+      if (ac) ac.textContent = `${amandaList.length} photo(s) from AQ folder`;
+      if (cc) cc.textContent = `${(imageManifest.couples || []).length} photo(s) from AQ folder`;
+
+      renderNewlywedsSection();
     }
 
     const ceremonySteps = [
@@ -867,13 +871,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       if (window.lucide) window.lucide.createIcons();
 
-      const amandaIdx = getWeeklyIndex(AMANDA_PHOTO_COUNT);
-      document.getElementById("amanda-weekly-img").src = `/images/amanda-${amandaIdx}.jpg`;
-      document.getElementById("amanda-week-badge").textContent = `Dover, Ohio • Tuscarawas County`;
-      document.getElementById("portal-amanda-count").textContent = `${AMANDA_PHOTO_COUNT} (amanda-1.jpg .. amanda-${AMANDA_PHOTO_COUNT}.jpg)`;
-      document.getElementById("portal-couple-count").textContent = `${COUPLE_PHOTO_COUNT} (couple-1.jpg .. couple-${COUPLE_PHOTO_COUNT}.jpg)`;
-
-      renderNewlywedsSection();
+      loadAqManifest();
       updateCeremonyReader(1);
 
       document.getElementById("mobile-menu-toggle-btn")?.addEventListener("click", () => {

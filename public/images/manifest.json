@@ -1,0 +1,18 @@
+{
+  "amanda": [
+    "/images/aq-1.jpg"
+  ],
+  "couples": [
+    "/images/aq-2.png",
+    "/images/aq-3.png",
+    "/images/aq-4.jpg",
+    "/images/aq-5.jpg"
+  ],
+  "all": [
+    "/images/aq-1.jpg",
+    "/images/aq-2.png",
+    "/images/aq-3.png",
+    "/images/aq-4.jpg",
+    "/images/aq-5.jpg"
+  ]
+}

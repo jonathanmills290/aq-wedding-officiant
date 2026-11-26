@@ -1,436 +1,978 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AQ Wedding Officiant | Licensed Wedding Officiant in Dover, OH</title>
-  <meta name="description" content="AQ Wedding Officiant provides custom weddings, elopements, vow renewals, and marriage license signing in Dover, New Philadelphia, Zoar, Sugarcreek, and across Tuscarawas County, Ohio." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://aqweddingofficiantllc.com/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQ Wedding Officiant | Warm Ceremonies in Tuscarawas County &amp; Tri-County OH</title>
+  <meta name="description" content="AQ Wedding Officiant offers warm, custom wedding ceremonies, elopements, vow renewals, and marriage license signings across Dover, New Philadelphia, Tuscarawas County, and the surrounding tri-county area in Ohio." />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="AQ Wedding Officiant | Dover & Tuscarawas County, OH" />
-  <meta property="og:description" content="Heartfelt, personalized wedding ceremonies, elopements, and vow renewals across Dover, New Philadelphia, and Northeast Ohio." />
-  <meta property="og:url" content="https://aqweddingofficiantllc.com/" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "AQ Wedding Officiant",
-    "legalName": "AQ Wedding Officiant LLC",
-    "url": "https://aqweddingofficiantllc.com/",
-    "description": "Ohio Secretary of State licensed wedding officiant offering custom ceremonies, elopements, vow renewals, and quick legal marriage signings in Dover and Tuscarawas County, Ohio.",
-    "founder": {
-      "@type": "Person",
-      "name": "Amanda Qualls"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dover",
-      "addressRegion": "OH",
-      "postalCode": "44622",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Dover, OH" },
-      { "@type": "City", "name": "New Philadelphia, OH" },
-      { "@type": "City", "name": "Zoar, OH" },
-      { "@type": "City", "name": "Sugarcreek, OH" },
-      { "@type": "City", "name": "Bolivar, OH" },
-      { "@type": "City", "name": "Uhrichsville, OH" },
-      { "@type": "AdministrativeArea", "name": "Tuscarawas County, OH" }
-    ],
-    "priceRange": "$$"
-  }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FFFDF9',
+              peach: '#FFF4E8',
+              apricot: '#FED7AA',
+              warm: '#FDBA74',
+              orange: '#EA580C',
+              terracotta: '#C2410C',
+              rust: '#9A3412',
+              deep: '#7C2D12',
+              gold: '#D97706',
+              goldlight: '#FBBF24',
+              charcoal: '#241914',
+              muted: '#665349'
+            }
+          },
+          fontFamily: {
+            script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 10px 30px rgba(124, 45, 18, 0.08)'
+          }
+        }
+      }
+    }
   </script>
 
   <style>
-    :root {
-      --bg: #faf8f5;
-      --surface: #ffffff;
-      --ink: #1f2421;
-      --muted: #5a625e;
-      --accent: #7c5c43;
-      --accent-dark: #5e4430;
-      --border: #e6dfd5;
-      --soft: #f2ece4;
+    .hero-orange-gradient {
+      background: linear-gradient(140deg, #7C2D12 0%, #9A3412 42%, #C2410C 78%, #EA580C 100%);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.65;
+    .warm-dots {
+      background-color: #FFFDF9;
+      background-image: radial-gradient(#FDBA74 0.7px, transparent 0.7px);
+      background-size: 24px 24px;
     }
-    .sans {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .nav {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 1rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    .brand {
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      align-items: center;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff !important;
-      padding: 0.72rem 1.3rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-    }
-    .btn:hover { background: var(--accent-dark); }
-    .btn-outline {
-      background: transparent;
-      color: var(--accent) !important;
-      border: 1.5px solid var(--accent);
-    }
-    .hero {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 4rem 1.25rem 3.5rem;
-      text-align: center;
-    }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 0.85rem;
-    }
-    h1 {
-      font-size: clamp(2rem, 4.5vw, 3.1rem);
-      line-height: 1.18;
-      max-width: 780px;
-      margin: 0 auto 1.1rem;
-      font-weight: 600;
-    }
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 1.8rem;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 0.85rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .trust-bar {
-      background: var(--soft);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 1.25rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    section {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 3.5rem 1.25rem;
-    }
-    h2 {
-      font-size: 1.85rem;
-      margin-bottom: 0.6rem;
-      text-align: center;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 2.4rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.35rem;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.6rem;
-    }
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--ink);
-    }
-    .card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-    .areas {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.6rem;
-      margin-top: 1.1rem;
-    }
-    .pill {
-      background: var(--soft);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      color: var(--ink);
-    }
-    .faq-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem 1.4rem;
-      margin-bottom: 0.9rem;
-    }
-    .faq-item h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.35rem;
-    }
-    .faq-item p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .contact-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.2rem 1.5rem;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.2rem;
-    }
-    label {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.72rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.96rem;
-      background: var(--bg);
-      color: var(--ink);
-    }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 1.25rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-    @media (max-width: 640px) {
-      .nav-links a:not(.btn) { display: none; }
+    .referral-choice.active {
+      background: #C2410C;
+      color: #FFFFFF;
+      border-color: #7C2D12;
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="nav">
-      <a href="#" class="brand">AQ Wedding Officiant</a>
-      <nav class="nav-links sans">
-        <a href="#services">Services</a>
-        <a href="#areas">Service Area</a>
-        <a href="#faq">Ohio License FAQ</a>
-        <a href="#inquire" class="btn">Check Date</a>
+<body class="font-sans text-brand-charcoal bg-brand-cream selection:bg-brand-orange selection:text-white antialiased min-h-screen flex flex-col">
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 pointer-events-none"></div>
+
+  <!-- Top Warm Ribbon -->
+  <div class="bg-brand-peach border-b border-brand-warm/60 text-brand-deep text-xs sm:text-sm py-2 px-4 text-center font-medium">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+      <span class="inline-flex items-center gap-1.5 font-semibold text-brand-rust">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-orange"></i>
+        Tuscarawas County &amp; Tri-County Area, OH
+      </span>
+      <span class="hidden sm:inline text-brand-warm">&bull;</span>
+      <span>Warm, Composed &amp; Personal Ceremonies</span>
+      <span class="hidden md:inline text-brand-warm">&bull;</span>
+      <a href="#booking" class="underline font-semibold text-brand-terracotta hover:text-brand-deep">Inquire: amandaqswedding@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-warm/50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-orange to-brand-deep p-0.5 shadow-sm">
+          <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+            <span class="font-script text-2xl font-bold text-brand-rust pt-1">AQ</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-script text-2xl sm:text-3xl text-brand-rust block leading-none">AQ Wedding Officiant</span>
+          <span class="text-[11px] font-semibold tracking-wider text-brand-gold uppercase mt-0.5 block">Dover &bull; Tuscarawas &bull; Tri-County</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-brand-muted">
+        <a href="#referral-check" class="hover:text-brand-rust transition">How You Found Us</a>
+        <a href="#newlyweds" class="hover:text-brand-rust transition">Newlyweds</a>
+        <a href="#ceremony-details" class="hover:text-brand-rust transition">Ceremony Script</a>
+        <a href="#builder-section" class="hover:text-brand-rust transition font-semibold text-brand-terracotta">Ceremony Builder</a>
+        <a href="#planning-guide" class="hover:text-brand-rust transition">OH License Guide</a>
+        <a href="#faq" class="hover:text-brand-rust transition">FAQ</a>
       </nav>
+
+      <div class="hidden sm:flex items-center gap-2.5">
+        <button id="owner-portal-btn" class="px-3.5 py-2 text-xs font-bold text-brand-rust border border-brand-warm rounded-full hover:bg-brand-peach transition flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-orange"></i>
+          <span>Owner Portal</span>
+        </button>
+        <a href="#booking" class="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-brand-terracotta to-brand-rust rounded-full hover:from-brand-rust hover:to-brand-deep shadow-md transition">
+          Check Date &amp; Book
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 lg:hidden">
+        <a href="#booking" class="px-3.5 py-1.5 text-xs font-bold text-white bg-brand-terracotta rounded-full">Book</a>
+        <button id="mobile-menu-toggle-btn" class="p-2 text-brand-rust" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-brand-warm/50 px-4 py-4 shadow-lg">
+      <div class="flex flex-col gap-2.5 text-sm font-medium text-brand-charcoal">
+        <a href="#referral-check" class="mobile-nav-link py-2 border-b border-orange-100">How You Found Us</a>
+        <a href="#newlyweds" class="mobile-nav-link py-2 border-b border-orange-100">Newlyweds &amp; Love Stories</a>
+        <a href="#ceremony-details" class="mobile-nav-link py-2 border-b border-orange-100">8-Part Ceremony Script</a>
+        <a href="#builder-section" class="mobile-nav-link py-2 border-b border-orange-100 text-brand-terracotta font-semibold">Interactive Ceremony Builder</a>
+        <a href="#planning-guide" class="mobile-nav-link py-2 border-b border-orange-100">Ohio License Guide &amp; Checklist</a>
+        <a href="#faq" class="mobile-nav-link py-2 border-b border-orange-100">FAQ</a>
+        <button id="mobile-owner-portal-btn" class="mobile-nav-link py-2 text-left font-semibold text-brand-rust flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-brand-orange"></i>
+          <span>Owner Portal</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow sans">Dover &amp; Tuscarawas County, Ohio</div>
-      <h1>Thoughtful, Personal Wedding Ceremonies Crafted Around Your Story</h1>
-      <p class="sans">
-        Led by Amanda Qualls, AQ Wedding Officiant creates custom weddings, intimate elopements, vow renewals, and quick legal marriage signings throughout Dover, New Philadelphia, and Northeast Ohio.
-      </p>
-      <div class="hero-actions sans">
-        <a href="#inquire" class="btn">Request Your Wedding Date</a>
-        <a href="#services" class="btn btn-outline">View Ceremony Options</a>
+  <main class="flex-grow">
+
+    <!-- HERO SECTION: Warm Two-Tone Orange + Script Headings + Amanda Solo Portrait Card -->
+    <section id="hero" class="hero-orange-gradient text-white py-12 sm:py-16 lg:py-20 border-b-4 border-brand-warm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Copy (7 cols) -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 text-xs font-semibold tracking-wider uppercase text-amber-100">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-200"></i>
+              Dover &bull; New Philadelphia &bull; Tuscarawas &amp; Tri-County OH
+            </span>
+
+            <h1 class="font-script text-5xl sm:text-6xl lg:text-7xl tracking-normal leading-[1.08] text-white">
+              Your Love Story, Warmly &amp; Gracefully Spoken
+            </h1>
+
+            <p class="text-orange-50 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Serving couples across Dover, New Philadelphia, Historic Zoar, Sugarcreek, Tuscarawas County, and the surrounding tri-county area with warm, composed, and personal wedding ceremonies.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1 text-left">
+              <div class="bg-white/12 backdrop-blur-xs border border-white/20 rounded-xl p-3">
+                <p class="text-xs font-bold text-amber-200">Local &amp; Personal</p>
+                <p class="text-[11px] text-orange-100 mt-0.5">Rooted in Dover &amp; Tusc County</p>
+              </div>
+              <div class="bg-white/12 backdrop-blur-xs border border-white/20 rounded-xl p-3">
+                <p class="text-xs font-bold text-amber-200">Custom Wording</p>
+                <p class="text-[11px] text-orange-100 mt-0.5">Faith, secular, or personal vows</p>
+              </div>
+              <div class="bg-white/12 backdrop-blur-xs border border-white/20 rounded-xl p-3">
+                <p class="text-xs font-bold text-amber-200">Cord of 3 Strands</p>
+                <p class="text-[11px] text-orange-100 mt-0.5">Optional unity &amp; scripture</p>
+              </div>
+              <div class="bg-white/12 backdrop-blur-xs border border-white/20 rounded-xl p-3">
+                <p class="text-xs font-bold text-amber-200">License Guidance</p>
+                <p class="text-[11px] text-orange-100 mt-0.5">Smooth Ohio signing &amp; filing</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <a href="#booking" class="w-full sm:w-auto px-7 py-3.5 bg-white text-brand-deep font-bold rounded-full shadow-lg hover:bg-brand-peach transition text-sm sm:text-base">
+                Check Date &amp; Inquire
+              </a>
+              <a href="#builder-section" class="w-full sm:w-auto px-7 py-3.5 bg-brand-deep/60 border border-white/35 text-white font-semibold rounded-full hover:bg-brand-deep transition text-sm sm:text-base">
+                Customize Your Ceremony
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Card: Weekly Rotating Solo Photo of Amanda + Name & Title Below (5 cols) -->
+          <div class="lg:col-span-5">
+            <aside class="bg-white text-brand-charcoal rounded-3xl p-4 shadow-2xl border-2 border-brand-warm max-w-sm mx-auto">
+              <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-brand-peach border border-brand-warm/50 flex items-center justify-center relative">
+                <img
+                  id="amanda-weekly-img"
+                  src="/images/amanda-1.jpg"
+                  alt="Amanda Qualls"
+                  class="w-full h-full object-cover block"
+                  onerror="handleAmandaPhotoError(this)"
+                />
+                <div id="amanda-weekly-fallback" class="hidden p-6 text-center text-brand-rust text-xs leading-relaxed">
+                  <p class="font-bold text-sm mb-1">Amanda Spotlight Ready</p>
+                  <p>Add solo photos to <code class="bg-white px-1.5 py-0.5 rounded">public/images/amanda-1.jpg</code> (and <code class="bg-white px-1.5 py-0.5 rounded">amanda-2.jpg</code> when ready) from your <code class="bg-white px-1.5 py-0.5 rounded">AQ</code> folder.</p>
+                </div>
+              </div>
+              <div class="pt-4 pb-1 px-2 text-center">
+                <h2 class="font-script text-3xl text-brand-rust leading-tight">Amanda Qualls</h2>
+                <p class="text-xs sm:text-sm font-semibold text-brand-muted mt-0.5">Wedding Officiant &bull; AQ Wedding Officiant</p>
+                <p id="amanda-week-badge" class="text-[11px] font-medium text-brand-terracotta mt-1">Dover, Ohio &bull; Tuscarawas County</p>
+              </div>
+            </aside>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <div class="trust-bar sans">
-      Licensed &amp; Registered with the Ohio Secretary of State &bull; Based in Dover, OH &bull; Custom Scripts &amp; Same-Week Elopements Available
-    </div>
+    <!-- TOP REFERRAL QUESTIONNAIRE (Multiple Choice + Feeds Inquiry Form) -->
+    <section id="referral-check" class="pt-10 pb-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-brand-warm shadow-soft border-t-4 border-t-brand-terracotta">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+            <div>
+              <h2 class="font-script text-3xl text-brand-rust leading-none">How Did You Hear About Us?</h2>
+              <p class="text-xs sm:text-sm text-brand-muted mt-1">Pick an option below so we know what reaches local couples best—it automatically attaches to your inquiry.</p>
+            </div>
+            <a href="#booking" class="text-xs font-bold text-brand-terracotta hover:text-brand-deep underline shrink-0">Jump to Inquiry Form &rarr;</a>
+          </div>
 
-    <section id="services">
-      <h2>Ceremony Services</h2>
-      <p class="section-sub sans">Every couple gets a calm, well-paced ceremony tailored to your style—traditional, modern, faith-inspired, or short and sweet.</p>
-      <div class="grid">
-        <div class="card">
-          <h3>Custom Full Wedding</h3>
-          <p class="sans">Personalized ceremony script written from your story, rehearsal coordination, vow guidance, and prompt filing of your signed Ohio marriage license.</p>
-        </div>
-        <div class="card">
-          <h3>Intimate Elopements</h3>
-          <p class="sans">Meaningful ceremonies for two or a small group of loved ones at local parks, historic venues, backyards, or scenic Tuscarawas County spots.</p>
-        </div>
-        <div class="card">
-          <h3>Sign &amp; Go Legal Ceremony</h3>
-          <p class="sans">Simple, stress-free legal solemnization and marriage license completion in Dover or New Philadelphia for couples skipping a large reception.</p>
-        </div>
-        <div class="card">
-          <h3>Vow Renewals</h3>
-          <p class="sans">Celebrate milestone anniversaries and fresh chapters with a custom ceremony designed around your journey together.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5" role="group" aria-label="Referral Source Multiple Choice">
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Google Search">
+              Google Search
+            </button>
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Facebook / Instagram">
+              Facebook / Instagram
+            </button>
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Friend or Family Referral">
+              Friend / Family
+            </button>
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Venue / Photographer / Planner">
+              Venue / Vendor
+            </button>
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Local Dover / Tuscarawas Buzz">
+              Dover / Local Buzz
+            </button>
+            <button type="button" class="referral-choice px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/60 text-brand-charcoal text-xs font-semibold text-left hover:bg-brand-peach transition" data-source="Other">
+              Other
+            </button>
+          </div>
+
+          <div class="mt-3.5 flex flex-col sm:flex-row gap-3">
+            <input
+              type="text"
+              id="referral-detail-input"
+              placeholder="Optional: Who referred you or where did you see us? (name, page, venue, or town)"
+              class="flex-grow px-4 py-2 text-xs sm:text-sm rounded-xl border border-brand-warm/80 bg-brand-cream focus:outline-none focus:ring-2 focus:ring-brand-orange"
+            />
+            <span id="referral-live-status" class="self-center text-xs font-semibold text-brand-rust shrink-0">Selected: None yet</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="areas">
-      <div class="areas">
-        <h2>Serving Dover &amp; Surrounding Ohio Communities</h2>
-        <p class="sans" style="color: var(--muted); max-width: 600px; margin: 0.5rem auto 0;">
-          Based in Dover, Ohio (44622) and available for travel across Tuscarawas County and neighboring Northeast Ohio venues.
-        </p>
-        <div class="pill-row sans">
-          <span class="pill">Dover, OH</span>
-          <span class="pill">New Philadelphia, OH</span>
-          <span class="pill">Historic Zoar Village</span>
-          <span class="pill">Sugarcreek, OH</span>
-          <span class="pill">Bolivar, OH</span>
-          <span class="pill">Uhrichsville &amp; Dennison</span>
-          <span class="pill">Mineral City &amp; Atwood Lake</span>
-          <span class="pill">Canton &amp; Stark County</span>
+    <!-- NEWLYWEDS & LOVE CELEBRATIONS SECTION (Couples Amanda Married) -->
+    <section id="newlyweds" class="py-14 sm:py-20 bg-white border-b border-brand-warm/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-peach border border-brand-warm text-brand-rust text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="heart" class="w-3.5 h-3.5 text-brand-orange fill-brand-orange"></i> Newlyweds &amp; Love Celebrations
+          </span>
+          <h2 class="font-script text-4xl sm:text-5xl lg:text-6xl text-brand-deep leading-tight">
+            Celebrating the Couples We&rsquo;ve Joined in Love
+          </h2>
+          <p class="text-brand-muted mt-2 text-sm sm:text-base leading-relaxed">
+            Nothing brings us greater joy than seeing two hearts promised to one another. We wish every couple Amanda has married a lifetime overflowing with laughter, grace, patience, and deep love.
+          </p>
+        </div>
+
+        <div id="newlyweds-grid" class="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <!-- Populated & rotated by JS from available /images/couple-*.jpg files -->
         </div>
       </div>
     </section>
 
-    <section id="faq">
-      <h2>Ohio Marriage License &amp; Officiant FAQ</h2>
-      <p class="section-sub sans">Quick answers for couples getting married in Tuscarawas County, Ohio.</p>
-      <div class="faq-item">
-        <h3>Are you legally registered to perform weddings in Ohio?</h3>
-        <p class="sans">Yes. Amanda Qualls is an ordained minister registered and licensed with the Ohio Secretary of State to solemnize marriages anywhere in the State of Ohio.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Where do we get our marriage license for a Dover wedding?</h3>
-        <p class="sans">If either partner is an Ohio resident, apply at the Probate Court in the county where you reside (such as the Tuscarawas County Probate Court in New Philadelphia). Once issued, an Ohio marriage license is valid anywhere in Ohio for 60 days.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Can we write our own vows or keep the ceremony non-religious?</h3>
-        <p class="sans">Absolutely. Ceremonies can be secular, spiritual, traditional, or include unity rituals and personal vows—you approve the full script beforehand.</p>
+    <!-- CEREMONY SCRIPT READER (Interactive 8-Step Liturgy + Name Swapper) -->
+    <section id="ceremony-details" class="py-16 sm:py-24 bg-gradient-to-b from-brand-peach/60 via-brand-cream to-white border-b border-brand-warm/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-peach border border-brand-warm text-brand-rust text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-brand-orange"></i> Ceremony Order &amp; Wording
+          </span>
+          <h2 class="font-script text-4xl sm:text-5xl lg:text-6xl text-brand-deep leading-tight">
+            How a Ceremony Flows
+          </h2>
+          <p class="text-brand-muted mt-2 text-sm sm:text-base">
+            Preview our classic structure below and enter your names to see how it reads. Every section can be tailored to your faith, values, and style.
+          </p>
+        </div>
+
+        <!-- Personalize Preview Bar -->
+        <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-soft border border-brand-warm max-w-4xl mx-auto mb-10">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="text-xs sm:text-sm font-bold text-brand-rust flex items-center gap-2 shrink-0">
+              <i data-lucide="user-check" class="w-4 h-4 text-brand-orange"></i>
+              Preview Names:
+            </span>
+            <div class="flex items-center gap-2.5 w-full sm:w-auto">
+              <input type="text" id="preview-partner1-input" value="Hannah" placeholder="Partner 1" class="w-full sm:w-40 px-3 py-1.5 text-sm bg-brand-peach/50 border border-brand-warm rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange" />
+              <span class="font-script text-2xl text-brand-orange">&amp;</span>
+              <input type="text" id="preview-partner2-input" value="Caleb" placeholder="Partner 2" class="w-full sm:w-40 px-3 py-1.5 text-sm bg-brand-peach/50 border border-brand-warm rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange" />
+              <button type="button" id="apply-preview-names-btn" class="px-4 py-1.5 text-xs font-bold text-white bg-brand-terracotta hover:bg-brand-rust rounded-lg transition shrink-0">
+                Update
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-6xl mx-auto">
+          <!-- Step List (4 cols) -->
+          <div class="lg:col-span-4 bg-white rounded-2xl p-4 shadow-soft border border-brand-warm/70 space-y-1.5">
+            <div class="px-2 py-1.5 border-b border-orange-100 flex items-center justify-between mb-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-rust">8 Ceremony Parts</span>
+              <span class="text-xs text-brand-muted">Tap to read</span>
+            </div>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between bg-brand-peach text-brand-rust font-semibold border-l-4 border-brand-terracotta" data-step="1">
+              <span>1. Welcome &amp; Gathering</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-orange"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="2">
+              <span>2. Opening Prayer / Reflection</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="3">
+              <span>3. Reading on Love (1 Cor 13)</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="4">
+              <span>4. Cord of Three Strands Charge</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="5">
+              <span>5. The Marriage Vows</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="6">
+              <span>6. Exchange of Rings</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="7">
+              <span>7. Pronouncement &amp; First Kiss</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+            <button type="button" class="ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal" data-step="8">
+              <span>8. Closing Blessing</span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-brand-muted"></i>
+            </button>
+
+            <div class="pt-3 border-t border-orange-100">
+              <button type="button" id="copy-script-btn" class="w-full py-2 px-3 text-xs font-bold text-brand-rust bg-brand-peach hover:bg-brand-apricot rounded-lg transition flex items-center justify-center gap-1.5 border border-brand-warm">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Copy Full Script</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Step Card (8 cols) -->
+          <div class="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 shadow-soft border border-brand-warm">
+            <div class="flex items-center justify-between pb-4 border-b border-orange-100 mb-6">
+              <div>
+                <span id="active-step-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-brand-peach text-brand-rust">Step 1 of 8</span>
+                <h3 id="active-step-title" class="font-script text-4xl text-brand-deep mt-2 leading-none">Welcome &amp; Gathering</h3>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="prev-step-btn" class="p-2 rounded-full border border-brand-warm hover:bg-brand-peach text-brand-rust transition disabled:opacity-40" disabled aria-label="Previous step">
+                  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                </button>
+                <button type="button" id="next-step-btn" class="p-2 rounded-full bg-brand-terracotta hover:bg-brand-rust text-white transition" aria-label="Next step">
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <div id="active-step-content" class="min-h-[190px] flex flex-col justify-center"></div>
+
+            <div id="active-step-notes" class="mt-6 p-4 rounded-xl bg-brand-peach/70 border border-brand-warm/60 text-xs sm:text-sm text-brand-charcoal"></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="inquire">
-      <div class="contact-box">
-        <h2>Check Date Availability</h2>
-        <p class="section-sub sans" style="margin-bottom: 1rem;">Share your wedding date, city or venue, and ceremony style to confirm availability.</p>
-        <form id="inquiryForm" class="sans">
-          <div>
-            <label for="names">Couple's Names</label>
-            <input id="names" name="names" type="text" required placeholder="Alex &amp; Jordan" />
+    <!-- 4-STEP CEREMONY BUILDER WIZARD -->
+    <section id="builder-section" class="py-16 sm:py-24 warm-dots border-b border-brand-warm/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-peach border border-brand-warm text-brand-rust text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-orange"></i> Ceremony Builder
+          </span>
+          <h2 class="font-script text-4xl sm:text-5xl lg:text-6xl text-brand-deep leading-tight">
+            Shape Your Ceremony Before You Book
+          </h2>
+          <p class="text-brand-muted mt-2 text-sm sm:text-base">
+            Pick your ceremony style, reading, vows, and unity tradition—then send your selections straight into the inquiry form.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-soft border-2 border-brand-warm overflow-hidden">
+          <div class="bg-brand-peach border-b border-brand-warm p-3.5">
+            <div class="grid grid-cols-4 gap-2 text-center text-xs font-bold">
+              <button type="button" id="wizard-tab-1" class="py-2 px-1 rounded-lg bg-brand-terracotta text-white transition">1. Couple &amp; Date</button>
+              <button type="button" id="wizard-tab-2" class="py-2 px-1 rounded-lg bg-white text-brand-muted border border-brand-warm/60 transition">2. Readings</button>
+              <button type="button" id="wizard-tab-3" class="py-2 px-1 rounded-lg bg-white text-brand-muted border border-brand-warm/60 transition">3. Vows &amp; Unity</button>
+              <button type="button" id="wizard-tab-4" class="py-2 px-1 rounded-lg bg-white text-brand-muted border border-brand-warm/60 transition">4. Outline</button>
+            </div>
           </div>
-          <div>
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+          <div class="p-6 sm:p-8">
+            <div id="wizard-step-1" class="wizard-pane space-y-5">
+              <h3 class="font-script text-3xl text-brand-rust">Couple &amp; Ceremony Details</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-brand-rust uppercase mb-1">Partner 1 Name</label>
+                  <input type="text" id="w-partner1" value="Hannah" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-brand-rust uppercase mb-1">Partner 2 Name</label>
+                  <input type="text" id="w-partner2" value="Caleb" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-brand-rust uppercase mb-1">Ceremony Date</label>
+                  <input type="date" id="w-date" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-brand-rust uppercase mb-1">Town or Venue</label>
+                  <input type="text" id="w-location" value="Dover, OH" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+                </div>
+              </div>
+              <div class="flex justify-end pt-2">
+                <button type="button" id="wizard-next-1-btn" class="px-6 py-2.5 bg-brand-terracotta hover:bg-brand-rust text-white rounded-xl font-bold text-sm transition">
+                  Next: Readings &rarr;
+                </button>
+              </div>
+            </div>
+
+            <div id="wizard-step-2" class="wizard-pane hidden space-y-5">
+              <h3 class="font-script text-3xl text-brand-rust">Readings &amp; Tone</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <label class="p-4 rounded-2xl border-2 border-brand-orange bg-brand-peach/50 cursor-pointer">
+                  <input type="radio" name="scripture-choice" value="1 Corinthians 13:4-8" checked class="mr-2 accent-brand-terracotta" />
+                  <span class="font-bold text-sm text-brand-rust">1 Corinthians 13:4-8</span>
+                  <p class="text-xs text-brand-muted mt-1">Classic words on patience, kindness, and enduring love.</p>
+                </label>
+                <label class="p-4 rounded-2xl border border-brand-warm bg-white cursor-pointer">
+                  <input type="radio" name="scripture-choice" value="Colossians 3:12-14" class="mr-2 accent-brand-terracotta" />
+                  <span class="font-bold text-sm text-brand-charcoal">Colossians 3:12-14</span>
+                  <p class="text-xs text-brand-muted mt-1">Compassion, grace, and love binding everything together.</p>
+                </label>
+                <label class="p-4 rounded-2xl border border-brand-warm bg-white cursor-pointer">
+                  <input type="radio" name="scripture-choice" value="Warm Non-Religious / Poetic" class="mr-2 accent-brand-terracotta" />
+                  <span class="font-bold text-sm text-brand-charcoal">Warm Secular / Poetic Reading</span>
+                  <p class="text-xs text-brand-muted mt-1">Heartfelt reflection without religious scripture.</p>
+                </label>
+                <label class="p-4 rounded-2xl border border-brand-warm bg-white cursor-pointer">
+                  <input type="radio" name="scripture-choice" value="Custom Family or Couple Reading" class="mr-2 accent-brand-terracotta" />
+                  <span class="font-bold text-sm text-brand-charcoal">Custom Couple or Family Reading</span>
+                  <p class="text-xs text-brand-muted mt-1">Bring your own passage, letter, or reading.</p>
+                </label>
+              </div>
+              <label class="flex items-center gap-2.5 p-3.5 rounded-xl bg-brand-peach/60 border border-brand-warm text-xs sm:text-sm font-semibold text-brand-rust cursor-pointer">
+                <input type="checkbox" id="w-cord-three-strands" checked class="accent-brand-terracotta w-4 h-4" />
+                <span>Include Cord of Three Strands reflection (Ecclesiastes 4:9-12)</span>
+              </label>
+              <div class="flex justify-between pt-2">
+                <button type="button" id="wizard-prev-2-btn" class="px-5 py-2.5 border border-brand-warm rounded-xl font-bold text-sm text-brand-rust hover:bg-brand-peach transition">&larr; Back</button>
+                <button type="button" id="wizard-next-2-btn" class="px-6 py-2.5 bg-brand-terracotta hover:bg-brand-rust text-white rounded-xl font-bold text-sm transition">Next: Vows &amp; Unity &rarr;</button>
+              </div>
+            </div>
+
+            <div id="wizard-step-3" class="wizard-pane hidden space-y-5">
+              <h3 class="font-script text-3xl text-brand-rust">Vows &amp; Unity Moment</h3>
+              <div class="space-y-2.5">
+                <label class="flex items-start gap-2.5 p-3.5 rounded-xl border border-brand-warm bg-brand-peach/40 cursor-pointer text-sm">
+                  <input type="radio" name="vow-choice" value="Guided Vows + I Do" checked class="mt-1 accent-brand-terracotta" />
+                  <div>
+                    <strong class="text-brand-rust block">Guided Promises &amp; &ldquo;I Do&rdquo;</strong>
+                    <span class="text-xs text-brand-muted">Classic, clear promises led smoothly by Amanda.</span>
+                  </div>
+                </label>
+                <label class="flex items-start gap-2.5 p-3.5 rounded-xl border border-brand-warm bg-white cursor-pointer text-sm">
+                  <input type="radio" name="vow-choice" value="Personal Vows + Guided Promises" class="mt-1 accent-brand-terracotta" />
+                  <div>
+                    <strong class="text-brand-charcoal block">Personal Vows + Guided Promises</strong>
+                    <span class="text-xs text-brand-muted">Read your own words to each other, followed by covenant vows.</span>
+                  </div>
+                </label>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-brand-rust uppercase mb-1">Optional Unity Tradition</label>
+                <select id="w-unity" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm">
+                  <option value="None (Classic Ceremony)">None (Classic Ceremony)</option>
+                  <option value="Cord of Three Strands">Cord of Three Strands</option>
+                  <option value="Unity Candle">Unity Candle</option>
+                  <option value="Unity Sand">Unity Sand</option>
+                  <option value="Rose or Family Tribute">Rose or Family Tribute</option>
+                </select>
+              </div>
+              <div class="flex justify-between pt-2">
+                <button type="button" id="wizard-prev-3-btn" class="px-5 py-2.5 border border-brand-warm rounded-xl font-bold text-sm text-brand-rust hover:bg-brand-peach transition">&larr; Back</button>
+                <button type="button" id="wizard-next-3-btn" class="px-6 py-2.5 bg-brand-terracotta hover:bg-brand-rust text-white rounded-xl font-bold text-sm transition">See Ceremony Outline &rarr;</button>
+              </div>
+            </div>
+
+            <div id="wizard-step-4" class="wizard-pane hidden space-y-5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="font-script text-3xl text-brand-rust">Your Ceremony Outline</h3>
+                <button type="button" id="wizard-send-to-booking-btn" class="px-4 py-2 bg-brand-terracotta hover:bg-brand-rust text-white rounded-xl text-xs font-bold transition">
+                  Send Outline to Inquiry Form &darr;
+                </button>
+              </div>
+              <div id="w-live-script-output" class="p-5 rounded-2xl bg-brand-peach/50 border border-brand-warm text-sm font-serif leading-relaxed space-y-2.5"></div>
+              <div class="flex justify-start">
+                <button type="button" id="wizard-prev-4-btn" class="px-5 py-2.5 border border-brand-warm rounded-xl font-bold text-sm text-brand-rust hover:bg-brand-peach transition">&larr; Edit Choices</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="date">Ceremony Date</label>
-            <input id="date" name="date" type="date" required />
+        </div>
+      </div>
+    </section>
+
+    <!-- OHIO MARRIAGE LICENSE & SETUP CHECKLIST (Current Tuscarawas County Info) -->
+    <section id="planning-guide" class="py-16 sm:py-24 bg-white border-b border-brand-warm/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-terracotta">Tuscarawas &amp; Tri-County Area</span>
+            <h2 class="font-script text-4xl sm:text-5xl text-brand-deep leading-tight">Getting Married in Ohio Made Clear</h2>
+            <p class="text-sm sm:text-base text-brand-muted">
+              Serving Dover, New Philadelphia, Historic Zoar Village, Sugarcreek, Bolivar, Uhrichsville, across Tuscarawas County, and neighboring tri-county communities (including Stark, Holmes, and Carroll).
+            </p>
+            <div class="space-y-3 pt-2">
+              <div class="p-4 rounded-2xl bg-brand-peach/50 border border-brand-warm/70 border-l-4 border-l-brand-terracotta">
+                <strong class="text-sm text-brand-rust block">1. Schedule with Tuscarawas County Probate Court</strong>
+                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Tuscarawas County Probate Court (101 East High Ave, New Philadelphia, OH 44663; marriage licenses via (330) 365-3244) issues licenses by appointment—bring valid photo ID, birth certificate, and proof of Social Security number (plus certified divorce/dissolution decrees if previously married).</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-peach/50 border border-brand-warm/70 border-l-4 border-l-brand-terracotta">
+                <strong class="text-sm text-brand-rust block">2. Valid for 60 Days Anywhere in Ohio</strong>
+                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">Once issued, your Ohio marriage license is valid for 60 days and may be solemnized anywhere within Ohio.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-peach/50 border border-brand-warm/70 border-l-4 border-l-brand-terracotta">
+                <strong class="text-sm text-brand-rust block">3. Sign on Site &amp; Return Promptly</strong>
+                <p class="text-xs sm:text-sm text-brand-muted mt-0.5">We complete the license signing cleanly after your ceremony and make sure it gets returned promptly for recording.</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="location">Venue or City (e.g., Dover, New Philadelphia, Zoar)</label>
-            <input id="location" name="location" type="text" required placeholder="Dover, OH" />
+
+          <div class="lg:col-span-5 bg-brand-cream rounded-3xl p-6 border-2 border-brand-warm shadow-soft">
+            <div class="flex items-center justify-between pb-3 border-b border-brand-warm/50 mb-4">
+              <h3 class="font-script text-3xl text-brand-rust leading-none">Couple Setup Checklist</h3>
+              <span id="checklist-progress-badge" class="px-3 py-1 bg-brand-terracotta text-white text-xs font-bold rounded-full">0 of 5 Done</span>
+            </div>
+            <div class="space-y-2.5 text-xs sm:text-sm">
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-brand-warm/50 cursor-pointer">
+                <input type="checkbox" class="checklist-checkbox accent-brand-terracotta w-4 h-4" />
+                <span>Pick ceremony date, time &amp; local spot</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-brand-warm/50 cursor-pointer">
+                <input type="checkbox" class="checklist-checkbox accent-brand-terracotta w-4 h-4" />
+                <span>Book Probate Court marriage license appointment</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-brand-warm/50 cursor-pointer">
+                <input type="checkbox" class="checklist-checkbox accent-brand-terracotta w-4 h-4" />
+                <span>Choose ceremony tone, readings &amp; vows</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-brand-warm/50 cursor-pointer">
+                <input type="checkbox" class="checklist-checkbox accent-brand-terracotta w-4 h-4" />
+                <span>Set aside wedding rings &amp; any unity items</span>
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-brand-warm/50 cursor-pointer">
+                <input type="checkbox" class="checklist-checkbox accent-brand-terracotta w-4 h-4" />
+                <span>Bring marriage license on ceremony day</span>
+              </label>
+            </div>
           </div>
-          <div>
-            <label for="service">Ceremony Type</label>
-            <select id="service" name="service">
-              <option>Custom Full Wedding</option>
-              <option>Intimate Elopement</option>
-              <option>Sign &amp; Go Legal Ceremony</option>
-              <option>Vow Renewal</option>
-            </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY & BOOKING FORM (Routes directly to amandaqswedding@gmail.com) -->
+    <section id="booking" class="py-16 sm:py-24 bg-gradient-to-b from-brand-peach/70 to-brand-cream border-b border-brand-warm/40">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-soft border-2 border-brand-warm overflow-hidden">
+          <div class="hero-orange-gradient p-7 text-white text-center">
+            <h2 class="font-script text-4xl sm:text-5xl text-white leading-tight">Check Your Date &amp; Send an Inquiry</h2>
+            <p class="text-orange-100 text-sm mt-1">Goes straight to Amanda at <strong>amandaqswedding@gmail.com</strong>.</p>
           </div>
-          <div>
-            <label for="notes">Tell Us About Your Plans</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Estimated guest count, preferred time, or special requests"></textarea>
+
+          <form id="ceremony-booking-form" class="p-6 sm:p-9 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="b-partner1" class="block text-xs font-bold text-brand-rust uppercase mb-1">Partner 1 Name *</label>
+                <input type="text" id="b-partner1" required placeholder="First &amp; Last Name" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+              <div>
+                <label for="b-partner2" class="block text-xs font-bold text-brand-rust uppercase mb-1">Partner 2 Name *</label>
+                <input type="text" id="b-partner2" required placeholder="First &amp; Last Name" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+              <div>
+                <label for="b-email" class="block text-xs font-bold text-brand-rust uppercase mb-1">Your Email *</label>
+                <input type="email" id="b-email" required placeholder="you@example.com" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+              <div>
+                <label for="b-phone" class="block text-xs font-bold text-brand-rust uppercase mb-1">Phone Number</label>
+                <input type="tel" id="b-phone" placeholder="(330) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+              <div>
+                <label for="b-date" class="block text-xs font-bold text-brand-rust uppercase mb-1">Ceremony Date *</label>
+                <input type="date" id="b-date" required class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+              <div>
+                <label for="b-venue" class="block text-xs font-bold text-brand-rust uppercase mb-1">City or Venue (Dover, New Phila, Zoar...) *</label>
+                <input type="text" id="b-venue" required placeholder="Dover, OH" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm" />
+              </div>
+            </div>
+
+            <div>
+              <label for="b-referral" class="block text-xs font-bold text-brand-rust uppercase mb-1">How You Found Us</label>
+              <input type="text" id="b-referral" readonly placeholder="Tap an option in the box near the top or type below" class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-peach/40 text-sm text-brand-charcoal" />
+            </div>
+
+            <div>
+              <label for="b-notes" class="block text-xs font-bold text-brand-rust uppercase mb-1">Ceremony Vision &amp; Notes</label>
+              <textarea id="b-notes" rows="3" placeholder="Share your ceremony style, guest count, timing, or questions..." class="w-full px-4 py-2.5 rounded-xl border border-brand-warm bg-brand-cream text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-brand-terracotta to-brand-rust hover:from-brand-rust hover:to-brand-deep text-white font-bold rounded-full shadow-md transition text-sm sm:text-base">
+              Send Inquiry to amandaqswedding@gmail.com &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-script text-4xl sm:text-5xl text-brand-deep text-center mb-8">Common Questions</h2>
+        <div class="space-y-3.5">
+          <div class="faq-card border border-brand-warm rounded-2xl overflow-hidden bg-brand-cream/60">
+            <button type="button" class="faq-question-btn w-full p-4 text-left font-bold text-brand-rust flex items-center justify-between text-sm sm:text-base">
+              <span>Can we personalize our vows and ceremony tone?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-orange transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-brand-muted">
+              Yes. Whether you want warm and traditional, faith-centered, relaxed and heartfelt, or short and sweet, we tailor the ceremony around what feels genuine to both of you.
+            </div>
           </div>
-          <button type="submit" class="btn">Prepare Inquiry Email</button>
-          <p id="formStatus" style="font-size: 0.88rem; color: var(--accent); display: none;"></p>
-        </form>
+
+          <div class="faq-card border border-brand-warm rounded-2xl overflow-hidden bg-brand-cream/60">
+            <button type="button" class="faq-question-btn w-full p-4 text-left font-bold text-brand-rust flex items-center justify-between text-sm sm:text-base">
+              <span>What local areas do you cover?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-orange transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-brand-muted">
+              We serve Dover, New Philadelphia, Historic Zoar Village, Sugarcreek, Bolivar, Uhrichsville, across Tuscarawas County, and the surrounding tri-county area (including neighboring Stark, Holmes, and Carroll counties).
+            </div>
+          </div>
+
+          <div class="faq-card border border-brand-warm rounded-2xl overflow-hidden bg-brand-cream/60">
+            <button type="button" class="faq-question-btn w-full p-4 text-left font-bold text-brand-rust flex items-center justify-between text-sm sm:text-base">
+              <span>What do we need to bring for the marriage license?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-orange transition-transform"></i>
+            </button>
+            <div class="faq-answer hidden px-4 pb-4 text-xs sm:text-sm text-brand-muted">
+              Bring your valid Ohio marriage license issued by the Probate Court (within its 60-day window) so we can complete the solemnization and license signing smoothly.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="sans">
-    <p>&copy; 2026 AQ Wedding Officiant &bull; Dover, Ohio 44622 &bull; Serving Tuscarawas County &amp; Northeast Ohio</p>
-    <p style="margin-top: 0.35rem; font-size: 0.8rem; opacity: 0.85;">Site built by Milly Studios &bull; Websites &amp; Personalized Software</p>
+  <!-- FOOTER -->
+  <footer class="bg-brand-deep text-orange-100 py-10 px-4 text-center">
+    <div class="max-w-5xl mx-auto space-y-2">
+      <p class="font-script text-3xl text-white">AQ Wedding Officiant &bull; Dover, Ohio 44622</p>
+      <p class="text-xs text-orange-200">Tuscarawas County &amp; Tri-County Area, OH &bull; Inquiries: amandaqswedding@gmail.com</p>
+      <p class="text-xs text-amber-200/90 pt-2">Created by Milly Studios &bull; Websites &amp; Personalized Software</p>
+    </div>
   </footer>
 
+  <!-- OWNER PORTAL MODAL -->
+  <div id="owner-portal-modal" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 border-2 border-brand-warm shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-orange-100 pb-3">
+        <h3 class="font-script text-3xl text-brand-rust leading-none">Owner Portal</h3>
+        <button type="button" id="close-owner-modal-btn" class="text-brand-muted hover:text-brand-deep">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+        All couple inquiries from this site route to <strong>amandaqswedding@gmail.com</strong>. Set <code class="bg-brand-peach px-1.5 py-0.5 rounded text-brand-rust">AMANDA_PHOTO_COUNT</code> and <code class="bg-brand-peach px-1.5 py-0.5 rounded text-brand-rust">COUPLE_PHOTO_COUNT</code> in <code class="bg-brand-peach px-1.5 py-0.5 rounded text-brand-rust">public/index.html</code> to match the photos in <code class="bg-brand-peach px-1.5 py-0.5 rounded text-brand-rust">public/images/</code>.
+      </p>
+      <div class="p-3.5 rounded-xl bg-brand-peach/70 border border-brand-warm text-xs space-y-1">
+        <p><strong>Amanda Photo Slots:</strong> <span id="portal-amanda-count"></span></p>
+        <p><strong>Couple Photo Slots:</strong> <span id="portal-couple-count"></span></p>
+      </div>
+      <button type="button" id="done-owner-modal-btn" class="w-full py-2.5 bg-brand-terracotta hover:bg-brand-rust text-white font-bold rounded-xl text-sm">
+        Done
+      </button>
+    </div>
+  </div>
+
   <script>
-    document.getElementById("inquiryForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const names = document.getElementById("names").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const date = document.getElementById("date").value;
-      const location = document.getElementById("location").value.trim();
-      const service = document.getElementById("service").value;
-      const notes = document.getElementById("notes").value.trim();
+    // Adjust these numbers to match how many photos you actually have in public/images/
+    // Solo photos of Amanda: public/images/amanda-1.jpg, amanda-2.jpg, ...
+    // Couple photos:        public/images/couple-1.jpg, couple-2.jpg, ...
+    const AMANDA_PHOTO_COUNT = 2;
+    const COUPLE_PHOTO_COUNT = 3;
+    const ROTATION_START_MS = Date.UTC(2026, 10, 22);
+    const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 
-      const subject = encodeURIComponent("Wedding Officiant Inquiry - " + names + " (" + date + ")");
-      const body = encodeURIComponent(
-        "Couple: " + names + "\n" +
-        "Reply Email: " + email + "\n" +
-        "Date: " + date + "\n" +
-        "Location/Venue: " + location + "\n" +
-        "Ceremony Type: " + service + "\n\n" +
-        "Details:\n" + notes
-      );
+    function getWeeklyIndex(count) {
+      const safeCount = Math.max(1, count);
+      const weeks = Math.max(0, Math.floor((Date.now() - ROTATION_START_MS) / MS_PER_WEEK));
+      return (weeks % safeCount) + 1;
+    }
 
-      const status = document.getElementById("formStatus");
-      status.style.display = "block";
-      status.textContent = "Opening your email app with your ceremony details...";
-      window.location.href = "mailto:amandaqswedding@gmail.com?subject=" + subject + "&body=" + body;
+    let amandaFallbackAttempts = 0;
+    function handleAmandaPhotoError(imgEl) {
+      amandaFallbackAttempts += 1;
+      if (amandaFallbackAttempts <= AMANDA_PHOTO_COUNT) {
+        const nextIdx = ((getWeeklyIndex(AMANDA_PHOTO_COUNT) + amandaFallbackAttempts - 1) % AMANDA_PHOTO_COUNT) + 1;
+        imgEl.src = "/images/amanda-" + nextIdx + ".jpg";
+      } else {
+        imgEl.classList.add("hidden");
+        document.getElementById("amanda-weekly-fallback").classList.remove("hidden");
+      }
+    }
+
+    function renderNewlywedsSection() {
+      const grid = document.getElementById("newlyweds-grid");
+      const startIdx = getWeeklyIndex(COUPLE_PHOTO_COUNT);
+      const stories = [
+        {
+          blessing: "Wishing you endless warmth, steady patience, and a marriage that grows sweeter with every season.",
+          label: "Newlyweds Spotlight"
+        },
+        {
+          blessing: "May your home always be filled with laughter, grace, and the joy you shared on your ceremony day.",
+          label: "Joined in Love"
+        },
+        {
+          blessing: "So happy to celebrate your covenant—may every year ahead bring deeper love and peace.",
+          label: "Happily Ever After"
+        }
+      ];
+
+      grid.innerHTML = stories.map((item, idx) => {
+        const photoNum = ((startIdx + idx - 1) % Math.max(1, COUPLE_PHOTO_COUNT)) + 1;
+        const src = "/images/couple-" + photoNum + ".jpg";
+        return `
+          <article class="bg-brand-cream rounded-2xl overflow-hidden border border-brand-warm shadow-soft flex flex-col">
+            <div class="aspect-[4/3] w-full bg-brand-peach flex items-center justify-center overflow-hidden relative">
+              <img
+                src="${src}"
+                alt="${item.label}"
+                class="w-full h-full object-cover block"
+                onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+              />
+              <div class="hidden p-5 text-center text-xs text-brand-rust">
+                <p class="font-bold mb-1">${item.label}</p>
+                <p>Add <code class="bg-white px-1 py-0.5 rounded">public/images/couple-${photoNum}.jpg</code> from your <code class="bg-white px-1 py-0.5 rounded">AQ</code> folder.</p>
+              </div>
+            </div>
+            <div class="p-5 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-terracotta">${item.label}</span>
+                <p class="font-serif italic text-lg text-brand-charcoal mt-1.5 leading-snug">&ldquo;${item.blessing}&rdquo;</p>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    const ceremonySteps = [
+      { step: 1, title: "Welcome & Gathering", script: "Friends and family, we gather together to celebrate the love and union of {P1} and {P2}.", notes: "Welcomes guests and sets a warm, unhurried tone." },
+      { step: 2, title: "Opening Prayer / Reflection", script: "We honor this moment and ask for peace, wisdom, and grace over {P1} and {P2} as they begin this chapter together.", notes: "Can be written as a prayer, blessing, or warm reflection." },
+      { step: 3, title: "Reading on Love (1 Cor 13)", script: "Love is patient, love is kind. It does not envy or boast; it holds no record of wrongs and rejoices in truth.", notes: "A timeless reading on grace and everyday devotion." },
+      { step: 4, title: "Cord of Three Strands Charge", script: "A cord of three strands is not quickly broken—built on care, trust, and what matters most to {P1} and {P2}.", notes: "Works smoothly with or without a physical cord ceremony." },
+      { step: 5, title: "The Marriage Vows", script: "{P1} and {P2}, do you promise to cherish, respect, and stand beside one another through every season of life? We do.", notes: "Supports traditional vows, personal vows, or repeat-after-me wording." },
+      { step: 6, title: "Exchange of Rings", script: "These rings are outward signs of an inward promise—unbroken and ongoing between {P1} and {P2}.", notes: "Includes ring warming or blessing if desired." },
+      { step: 7, title: "Pronouncement & First Kiss", script: "With joy and honor, I pronounce {P1} and {P2} husband and wife—you may share your first kiss as newlyweds!", notes: "Follows Ohio marriage solemnization requirements." },
+      { step: 8, title: "Closing Blessing", script: "May your days ahead be marked by kindness, laughter, and lasting love. Congratulations to {P1} and {P2}!", notes: "Transitions smoothly into recessional music and photos." }
+    ];
+
+    const state = { partner1: "Hannah", partner2: "Caleb", activeStep: 1, referralChoice: "" };
+
+    function showToast(msg) {
+      const wrap = document.getElementById("toast-container");
+      const el = document.createElement("div");
+      el.className = "px-4 py-2.5 rounded-xl bg-brand-deep text-white text-xs font-semibold shadow-lg";
+      el.textContent = msg;
+      wrap.appendChild(el);
+      setTimeout(() => el.remove(), 3000);
+    }
+
+    function updateCeremonyReader(stepNum) {
+      state.activeStep = stepNum;
+      const item = ceremonySteps.find(s => s.step === stepNum) || ceremonySteps[0];
+      const text = item.script.replace(/\{P1\}/g, state.partner1).replace(/\{P2\}/g, state.partner2);
+
+      document.querySelectorAll(".ceremony-step-nav-btn").forEach(btn => {
+        const s = parseInt(btn.getAttribute("data-step"), 10);
+        btn.className = s === stepNum
+          ? "ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between bg-brand-peach text-brand-rust font-semibold border-l-4 border-brand-terracotta"
+          : "ceremony-step-nav-btn w-full text-left px-3 py-2.5 rounded-xl text-sm flex items-center justify-between hover:bg-brand-peach/60 text-brand-charcoal";
+      });
+
+      document.getElementById("active-step-badge").textContent = `Step ${item.step} of 8`;
+      document.getElementById("active-step-title").textContent = item.title;
+      document.getElementById("active-step-content").innerHTML = `
+        <div class="p-6 rounded-2xl bg-brand-peach/50 border border-brand-warm/70">
+          <p class="font-serif italic text-xl sm:text-2xl text-brand-charcoal leading-relaxed">&ldquo;${text}&rdquo;</p>
+        </div>
+      `;
+      document.getElementById("active-step-notes").innerHTML = `<strong class="text-brand-rust">Note:</strong> ${item.notes}`;
+      document.getElementById("prev-step-btn").disabled = stepNum === 1;
+      document.getElementById("next-step-btn").disabled = stepNum === 8;
+    }
+
+    function syncReferralField() {
+      const detail = document.getElementById("referral-detail-input").value.trim();
+      const combined = state.referralChoice && detail
+        ? `${state.referralChoice} — ${detail}`
+        : (state.referralChoice || detail || "");
+      document.getElementById("b-referral").value = combined;
+      document.getElementById("referral-live-status").textContent = combined ? `Selected: ${combined}` : "Selected: None yet";
+    }
+
+    function setWizardStep(step) {
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById(`wizard-step-${i}`).classList.toggle("hidden", i !== step);
+        const tab = document.getElementById(`wizard-tab-${i}`);
+        tab.className = i === step
+          ? "py-2 px-1 rounded-lg bg-brand-terracotta text-white transition"
+          : "py-2 px-1 rounded-lg bg-white text-brand-muted border border-brand-warm/60 transition";
+      }
+      if (step === 4) {
+        const p1 = document.getElementById("w-partner1").value.trim() || "Partner 1";
+        const p2 = document.getElementById("w-partner2").value.trim() || "Partner 2";
+        const loc = document.getElementById("w-location").value.trim() || "Dover, OH";
+        const reading = document.querySelector('input[name="scripture-choice"]:checked')?.value || "1 Corinthians 13:4-8";
+        const vow = document.querySelector('input[name="vow-choice"]:checked')?.value || "Guided Vows + I Do";
+        const unity = document.getElementById("w-unity").value;
+        const cord = document.getElementById("w-cord-three-strands").checked ? "Included" : "Not included";
+        document.getElementById("w-live-script-output").innerHTML = `
+          <p><strong>Couple &amp; Location:</strong> ${p1} &amp; ${p2} (${loc})</p>
+          <p><strong>Reading:</strong> ${reading} &bull; <strong>Cord of Three Strands:</strong> ${cord}</p>
+          <p><strong>Vows &amp; Unity:</strong> ${vow} &bull; ${unity}</p>
+        `;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      const amandaIdx = getWeeklyIndex(AMANDA_PHOTO_COUNT);
+      document.getElementById("amanda-weekly-img").src = `/images/amanda-${amandaIdx}.jpg`;
+      document.getElementById("amanda-week-badge").textContent = `Dover, Ohio • Tuscarawas County`;
+      document.getElementById("portal-amanda-count").textContent = `${AMANDA_PHOTO_COUNT} (amanda-1.jpg .. amanda-${AMANDA_PHOTO_COUNT}.jpg)`;
+      document.getElementById("portal-couple-count").textContent = `${COUPLE_PHOTO_COUNT} (couple-1.jpg .. couple-${COUPLE_PHOTO_COUNT}.jpg)`;
+
+      renderNewlywedsSection();
+      updateCeremonyReader(1);
+
+      document.getElementById("mobile-menu-toggle-btn")?.addEventListener("click", () => {
+        document.getElementById("mobile-menu")?.classList.toggle("hidden");
+      });
+      document.querySelectorAll(".mobile-nav-link").forEach(a => {
+        a.addEventListener("click", () => document.getElementById("mobile-menu")?.classList.add("hidden"));
+      });
+
+      document.querySelectorAll(".referral-choice").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".referral-choice").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.referralChoice = btn.getAttribute("data-source");
+          syncReferralField();
+        });
+      });
+      document.getElementById("referral-detail-input")?.addEventListener("input", syncReferralField);
+
+      document.getElementById("apply-preview-names-btn")?.addEventListener("click", () => {
+        state.partner1 = document.getElementById("preview-partner1-input").value.trim() || "Partner 1";
+        state.partner2 = document.getElementById("preview-partner2-input").value.trim() || "Partner 2";
+        updateCeremonyReader(state.activeStep);
+        showToast("Updated ceremony preview names.");
+      });
+
+      document.querySelectorAll(".ceremony-step-nav-btn").forEach(btn => {
+        btn.addEventListener("click", () => updateCeremonyReader(parseInt(btn.getAttribute("data-step"), 10)));
+      });
+      document.getElementById("prev-step-btn")?.addEventListener("click", () => updateCeremonyReader(Math.max(1, state.activeStep - 1)));
+      document.getElementById("next-step-btn")?.addEventListener("click", () => updateCeremonyReader(Math.min(8, state.activeStep + 1)));
+
+      document.getElementById("copy-script-btn")?.addEventListener("click", () => {
+        const full = ceremonySteps.map(s => `${s.step}. ${s.title}\n${s.script.replace(/\{P1\}/g, state.partner1).replace(/\{P2\}/g, state.partner2)}`).join("\n\n");
+        navigator.clipboard?.writeText(full);
+        showToast("Ceremony script copied.");
+      });
+
+      document.getElementById("wizard-next-1-btn")?.addEventListener("click", () => setWizardStep(2));
+      document.getElementById("wizard-prev-2-btn")?.addEventListener("click", () => setWizardStep(1));
+      document.getElementById("wizard-next-2-btn")?.addEventListener("click", () => setWizardStep(3));
+      document.getElementById("wizard-prev-3-btn")?.addEventListener("click", () => setWizardStep(2));
+      document.getElementById("wizard-next-3-btn")?.addEventListener("click", () => setWizardStep(4));
+      document.getElementById("wizard-prev-4-btn")?.addEventListener("click", () => setWizardStep(3));
+      [1, 2, 3, 4].forEach(n => document.getElementById(`wizard-tab-${n}`)?.addEventListener("click", () => setWizardStep(n)));
+
+      document.getElementById("wizard-send-to-booking-btn")?.addEventListener("click", () => {
+        document.getElementById("b-partner1").value = document.getElementById("w-partner1").value;
+        document.getElementById("b-partner2").value = document.getElementById("w-partner2").value;
+        if (document.getElementById("w-date").value) document.getElementById("b-date").value = document.getElementById("w-date").value;
+        document.getElementById("b-venue").value = document.getElementById("w-location").value;
+        document.getElementById("b-notes").value = document.getElementById("w-live-script-output").innerText.trim();
+        document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+        showToast("Outline attached to inquiry form.");
+      });
+
+      document.querySelectorAll(".checklist-checkbox").forEach(cb => {
+        cb.addEventListener("change", () => {
+          const all = document.querySelectorAll(".checklist-checkbox");
+          const done = Array.from(all).filter(x => x.checked).length;
+          document.getElementById("checklist-progress-badge").textContent = `${done} of ${all.length} Done`;
+        });
+      });
+
+      document.querySelectorAll(".faq-question-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const ans = btn.nextElementSibling;
+          const icon = btn.querySelector(".faq-icon");
+          ans.classList.toggle("hidden");
+          icon?.classList.toggle("rotate-180");
+        });
+      });
+
+      const portalModal = document.getElementById("owner-portal-modal");
+      const openPortal = () => { portalModal?.classList.remove("hidden"); portalModal?.classList.add("flex"); };
+      const closePortal = () => { portalModal?.classList.add("hidden"); portalModal?.classList.remove("flex"); };
+      document.getElementById("owner-portal-btn")?.addEventListener("click", openPortal);
+      document.getElementById("mobile-owner-portal-btn")?.addEventListener("click", openPortal);
+      document.getElementById("close-owner-modal-btn")?.addEventListener("click", closePortal);
+      document.getElementById("done-owner-modal-btn")?.addEventListener("click", closePortal);
+
+      document.getElementById("ceremony-booking-form")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        syncReferralField();
+        const p1 = document.getElementById("b-partner1").value.trim();
+        const p2 = document.getElementById("b-partner2").value.trim();
+        const email = document.getElementById("b-email").value.trim();
+        const phone = document.getElementById("b-phone").value.trim();
+        const date = document.getElementById("b-date").value;
+        const venue = document.getElementById("b-venue").value.trim();
+        const referral = document.getElementById("b-referral").value.trim() || "Not specified";
+        const notes = document.getElementById("b-notes").value.trim();
+
+        const subject = encodeURIComponent(`Wedding Officiant Inquiry - ${p1} & ${p2} (${date})`);
+        const body = encodeURIComponent(
+          `Couple: ${p1} & ${p2}\nReply Email: ${email}\nPhone: ${phone || "Not given"}\nDate: ${date}\nLocation/Venue: ${venue}\nHow Found Us: ${referral}\n\nNotes:\n${notes}`
+        );
+        window.location.href = `mailto:amandaqswedding@gmail.com?subject=${subject}&body=${body}`;
+      });
     });
   </script>
 </body>

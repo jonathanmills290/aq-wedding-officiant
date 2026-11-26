@@ -196,15 +196,10 @@
               <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-brand-peach border border-brand-warm/50 flex items-center justify-center relative">
                 <img
                   id="amanda-weekly-img"
-                  src="/images/amanda-1.jpg"
+                  src="/images/aq-1.jpg"
                   alt="Amanda Qualls"
                   class="w-full h-full object-cover block"
-                  onerror="handleAmandaPhotoError(this)"
                 />
-                <div id="amanda-weekly-fallback" class="hidden p-6 text-center text-brand-rust text-xs leading-relaxed">
-                  <p class="font-bold text-sm mb-1">Amanda Spotlight Ready</p>
-                  <p>Add solo photos to <code class="bg-white px-1.5 py-0.5 rounded">public/images/amanda-1.jpg</code> (and <code class="bg-white px-1.5 py-0.5 rounded">amanda-2.jpg</code> when ready) from your <code class="bg-white px-1.5 py-0.5 rounded">AQ</code> folder.</p>
-                </div>
               </div>
               <div class="pt-4 pb-1 px-2 text-center">
                 <h2 class="font-script text-3xl text-brand-rust leading-tight">Amanda Qualls</h2>
@@ -713,9 +708,9 @@
   </div>
 
   <script>
+    const IMAGE_MANIFEST = {"amanda": ["/images/aq-1.jpg"], "couples": ["/images/aq-2.png", "/images/aq-3.png", "/images/aq-4.jpg", "/images/aq-5.jpg"], "all": ["/images/aq-1.jpg", "/images/aq-2.png", "/images/aq-3.png", "/images/aq-4.jpg", "/images/aq-5.jpg"]};
     const ROTATION_START_MS = Date.UTC(2026, 10, 22);
     const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
-    let imageManifest = { amanda: [], couples: [], all: [] };
 
     function getWeeklyIndex(count) {
       if (!count || count <= 1) return 0;
@@ -723,16 +718,12 @@
       return weeks % count;
     }
 
-    function handleAmandaPhotoError(imgEl) {
-      imgEl.classList.add("hidden");
-      document.getElementById("amanda-weekly-fallback").classList.remove("hidden");
-    }
-
     function renderNewlywedsSection() {
       const grid = document.getElementById("newlyweds-grid");
-      const list = imageManifest.couples || [];
+      const section = document.getElementById("newlyweds");
+      const list = IMAGE_MANIFEST.couples || [];
       if (!list.length) {
-        document.getElementById("newlyweds")?.classList.add("hidden");
+        if (section) section.classList.add("hidden");
         return;
       }
       const blessings = [
@@ -762,30 +753,23 @@
       }).join("");
     }
 
-    async function loadAqManifest() {
-      try {
-        const res = await fetch("/images/manifest.json", { cache: "no-store" });
-        if (res.ok) imageManifest = await res.json();
-      } catch (e) {}
-
-      const amandaList = imageManifest.amanda || [];
+    function loadAqManifest() {
+      const amandaList = IMAGE_MANIFEST.amanda || [];
       const imgEl = document.getElementById("amanda-weekly-img");
-      if (amandaList.length) {
+      if (imgEl && amandaList.length) {
         const idx = getWeeklyIndex(amandaList.length);
         imgEl.src = amandaList[idx];
-        document.getElementById("amanda-week-badge").textContent =
-          amandaList.length > 1
+        const badge = document.getElementById("amanda-week-badge");
+        if (badge) {
+          badge.textContent = amandaList.length > 1
             ? `Dover, Ohio • Tuscarawas County (Photo ${idx + 1} of ${amandaList.length})`
             : "Dover, Ohio • Tuscarawas County";
-      } else {
-        handleAmandaPhotoError(imgEl);
+        }
       }
-
       const ac = document.getElementById("portal-amanda-count");
       const cc = document.getElementById("portal-couple-count");
       if (ac) ac.textContent = `${amandaList.length} photo(s) from AQ folder`;
-      if (cc) cc.textContent = `${(imageManifest.couples || []).length} photo(s) from AQ folder`;
-
+      if (cc) cc.textContent = `${(IMAGE_MANIFEST.couples || []).length} photo(s) from AQ folder`;
       renderNewlywedsSection();
     }
 
